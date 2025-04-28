@@ -1,5 +1,5 @@
 body{
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -10,7 +10,7 @@ body{
 }
 
 .p-card {
-    background: rgb(152, 200, 203);
+    background: rgb(255, 255, 255);
     padding: 4rem;
     border-radius: 2rem;
     margin-top: 7rem;

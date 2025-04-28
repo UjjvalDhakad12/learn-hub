@@ -3,8 +3,16 @@ import Navbar from '../components/Navbar'
 import '../styles/Home.css'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { useState } from 'react'
 
 const Home = () => {
+
+    const [text, settext] = useState('');
+
+    const speak = () =>{
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(utterance);
+    };
 
     const cards = [
         {
@@ -61,7 +69,7 @@ const Home = () => {
 
 
     const learn = () => {
-        window.location = '/'
+        window.location = '/learn'
     }
 
     return (
@@ -96,6 +104,14 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <hr></hr>
+
+            <h1 className='book-title'>Listen text</h1>
+
+            <div className='listen'>
+                <input placeholder='Write text' type='text' className='listen-inp' onChange={(e)=>settext(e.target.value)} />
+                <button onClick={speak} className='listen-btn'>Listen</button>
+            </div>
 
             <div>
                 <hr></hr>
@@ -125,7 +141,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

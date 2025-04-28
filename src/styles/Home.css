@@ -23,7 +23,7 @@
 .hero-btn {
 
     appearance: button;
-    background-color: #1899D6;
+    background-color: #eff6fa;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
@@ -97,7 +97,7 @@ button:focus {
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
     gap: 3rem;
     margin: 0;
     padding: 1.3rem;
@@ -140,7 +140,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
 }
 
 .books {
@@ -159,7 +159,7 @@ button:focus {
 .book-title{
     padding-top: 2rem;
     text-align: center;
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
 }
 
 .book {
@@ -190,7 +190,7 @@ button:focus {
 .cover {
     top: 0;
     position: absolute;
-    background-color: rgb(240, 185, 185);
+    background-color: rgb(237, 244, 204);
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -224,4 +224,29 @@ button:focus {
     font-size: 20px;
     margin-left: 2rem;
     font-weight: bolder;
+}
+
+.listen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.listen-inp{
+    padding: 0.9rem;
+    background-color: #c5f8cd;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.listen-btn{
+    width: 6.6rem;
+    padding: 0.7rem;
+    font-size: large;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    background-color: #1CB0F6;
 }

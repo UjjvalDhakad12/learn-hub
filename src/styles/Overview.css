@@ -1,6 +1,6 @@
 .overview-container {
     padding: 40px;
-    background-color: rgb(118, 187, 189);
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
     text-align: center;
 }
@@ -19,7 +19,7 @@
 }
 
 .learning-card {
-    background: rgb(217, 191, 191);
+    background: rgb(255, 246, 246);
     padding: 25px;
     border-radius: 12px;
     width: 300px;
