@@ -16,11 +16,13 @@ const Contact = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
+
+    //feach contact api
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await axios.post('http://localhost:5000/api/contact', form, { withCredentials: true });
-            alert("Registered successfully!");
+            alert("Thanks!");
         } catch (err) {
             console.error(err.response?.data?.msg || "Error");
         }
@@ -35,7 +37,15 @@ const Contact = () => {
                     <form className='c-card' onSubmit={handleSubmit}>
                         <input name='name' className='c-inp' placeholder='Enter your name' value={form.name} onChange={handleChange} required />
                         <input name='email' className='c-inp' placeholder='Enter your email' value={form.email} onChange={handleChange} required />
-                        <input name='description' className='c-inp' placeholder='description' type='text' value={form.description} onChange={handleChange} required />
+                        <textarea
+                            name="description"
+                            className="c-inp"
+                            placeholder="Description"
+                            value={form.description}
+                            onChange={handleChange}
+                            required
+                        ></textarea>
+
                         <button type='submit' className='c-btn'>Submit</button>
                     </form>
                 </div>

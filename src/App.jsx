@@ -7,7 +7,7 @@ import Register from './pages/Register';
 import Learn from './pages/Learn';
 import Contact from './pages/Contact';
 import Overview from './pages/Overview';
-
+import Math from './pages/Math';
 
 export default function App() {
   return (
@@ -20,6 +20,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/math" element={<Math />} />
       </Routes>
     </BrowserRouter>
   );

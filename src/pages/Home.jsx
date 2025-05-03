@@ -7,13 +7,22 @@ import { useState } from 'react'
 
 const Home = () => {
 
+    //text to speech ke liye
     const [text, settext] = useState('');
 
-    const speak = () =>{
+    //text to speech function
+    const speak = () => {
         const utterance = new SpeechSynthesisUtterance(text);
+
+        utterance.rate = 0.8;  // 1 is normal, 0.5 is slow
+
+        utterance.pitch = 2; // 0 to 2
+        utterance.volume = 1; // 0 to 1
+
         speechSynthesis.speak(utterance);
     };
 
+    //cards for the home page
     const cards = [
         {
             title: "Learn from Zero",
@@ -67,7 +76,7 @@ const Home = () => {
         },
     ];
 
-
+    // Function to navigate to the learn page
     const learn = () => {
         window.location = '/learn'
     }
@@ -109,7 +118,7 @@ const Home = () => {
             <h1 className='book-title'>Listen text</h1>
 
             <div className='listen'>
-                <input placeholder='Write text' type='text' className='listen-inp' onChange={(e)=>settext(e.target.value)} />
+                <input placeholder='Write text' type='text' className='listen-inp' onChange={(e) => settext(e.target.value)} />
                 <button onClick={speak} className='listen-btn'>Listen</button>
             </div>
 

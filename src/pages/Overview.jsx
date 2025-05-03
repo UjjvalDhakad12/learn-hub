@@ -13,7 +13,7 @@ const Overview = () => {
     const subjects = [
         {
             title: "Math Learning",
-            description: "Start learning math from the very basics. Ideal for students of all ages. Build your foundation step-by-step.",
+            description: "Start learning math from the very basics. Ideal for students of all ages. Build your foundation step-by-step.  .",
             levels: ["Beginner", "Intermediate", "Advanced"]
         },
         {
